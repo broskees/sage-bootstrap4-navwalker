@@ -115,8 +115,8 @@ if (class_exists('\Walker_Nav_Menu')) {
           $atts['class']			= 'nav-link';
           if ( $args->has_children ){
             $classes[] = ' dropdown';
-//          $atts['href']   		= '#';
-//          $atts['data-toggle']	= 'dropdown';
+            $atts['href']   		= ! empty( $item->url ) ? $item->url : '';
+            $atts['data-hover']	= 'dropdown';
             $atts['class']			= 'dropdown-toggle nav-link';
             $atts['role']	= 'button';
             $atts['aria-haspopup']	= 'true';
